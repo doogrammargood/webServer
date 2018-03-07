@@ -1,0 +1,901 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Computer Networks Homework 1
+\end_layout
+
+\begin_layout Author
+Victor Bankston
+\end_layout
+
+\begin_layout Problem
+Consider the circuit switched network shown in figure 1.
+ There are 
+\begin_inset Formula $4$
+\end_inset
+
+ circuits on each link.
+ Label the four switches 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ going in the clockwise direction.
+\end_layout
+
+\begin_layout Problem
+a) What is the maximum number of simultaneous connections that can be in
+ progrsess in the network at any time?
+\end_layout
+
+\begin_layout Problem
+b) Suppose that all connections are between switches 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ What is the maximum number of simultaneous connections that can be in progress?
+\end_layout
+
+\begin_layout Problem
+c) Suppose we want to make four connections between switches 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+, and another four connections between switches 
+\begin_inset Formula $B$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Can we route these calls through the four links to accommodate all eight
+ connections?
+\end_layout
+
+\begin_layout Standard
+a) We can connect 
+\begin_inset Formula $\left(A,B\right)$
+\end_inset
+
+ 
+\begin_inset Formula $4$
+\end_inset
+
+ times, 
+\begin_inset Formula $\left(B,C\right)$
+\end_inset
+
+ 
+\begin_inset Formula $4$
+\end_inset
+
+ times, and 
+\begin_inset Formula $\left(C,D\right)$
+\end_inset
+
+ 
+\begin_inset Formula $4$
+\end_inset
+
+ times, and 
+\begin_inset Formula $\left(D,A\right)$
+\end_inset
+
+ 
+\begin_inset Formula $4$
+\end_inset
+
+ times for a total of 
+\begin_inset Formula $16$
+\end_inset
+
+ connections.
+ There cannot be more, because each each switch only has 
+\begin_inset Formula $8$
+\end_inset
+
+ connections to the network and this scheme uses all 
+\begin_inset Formula $8$
+\end_inset
+
+ connections for each host.
+\end_layout
+
+\begin_layout Standard
+b) In this case, we can only have 
+\begin_inset Formula $8$
+\end_inset
+
+ connections, 
+\begin_inset Formula $4$
+\end_inset
+
+ of which go through switch 
+\begin_inset Formula $D$
+\end_inset
+
+, and 
+\begin_inset Formula $4$
+\end_inset
+
+ of which go through switch 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ We cannot have more connections between 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+ because both 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+ use all 
+\begin_inset Formula $8$
+\end_inset
+
+ of their connections to the network.
+\end_layout
+
+\begin_layout Standard
+c) Yes.
+ We can connect 
+\begin_inset Formula $\left(A,C\right)$
+\end_inset
+
+ twice through the circuit 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+, and twice through the circuit 
+\begin_inset Formula $A,D,C$
+\end_inset
+
+.
+ We can connect 
+\begin_inset Formula $\left(B,D\right)$
+\end_inset
+
+ twice through 
+\begin_inset Formula $\left(B,C,D\right)$
+\end_inset
+
+ and twice through 
+\begin_inset Formula $\left(B,A,D\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+Review the caravan analogy discussed in class.
+ Assume that toll booths are 
+\begin_inset Formula $100$
+\end_inset
+
+km apart, and the cars propagate at 
+\begin_inset Formula $100\frac{km}{hr}$
+\end_inset
+
+.
+ A toll booth services a car at a rate of one car every 
+\begin_inset Formula $12$
+\end_inset
+
+ seconds.
+ Suppose the caravan (with 
+\begin_inset Formula $10$
+\end_inset
+
+ cars) begins in front of one toll booth, passing through a second tollbooth,
+ and finishes just after a third toll booth.
+ What is the end-to-end delay? (As we did in class, suppose that whenever
+ the first car of the caravan arrives at a toll booth, it waits at the entrance
+ until the other nine cars have arrived and lined up behind it.)
+\end_layout
+
+\begin_layout Standard
+First note that it takes 
+\begin_inset Formula $1hr=60min$
+\end_inset
+
+ for a car to travel from tollbooth to tollbooth (the propagation delay).
+ It will take 
+\begin_inset Formula $12\frac{car}{sec}\cdot10sec=120sec=2min$
+\end_inset
+
+ for the caravan to be serviced by the tollbooth.
+ It will therefore take 
+\begin_inset Formula $62$
+\end_inset
+
+ minutes for the last car to reach the second gate.
+ The caravan will be in the same scenario as the start of the problem, but
+ with one fewer tollbooth and one fewer road to traverse.
+ Applying the same logic again demonstrates that it will take 
+\begin_inset Formula $2\cdot62min=124min$
+\end_inset
+
+ for the cars to line up at the third toll booth, and 
+\begin_inset Formula $2$
+\end_inset
+
+ more minutes for the third tollbooth to service all 
+\begin_inset Formula $10$
+\end_inset
+
+ cars.
+ The total end to end delay is therefore 
+\begin_inset Formula $126min$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Alternatively, we can see that there will be 
+\begin_inset Formula $3$
+\end_inset
+
+ tollbooths with delay 
+\begin_inset Formula $2min$
+\end_inset
+
+ and 
+\begin_inset Formula $2$
+\end_inset
+
+ roads each with delay 
+\begin_inset Formula $60min$
+\end_inset
+
+ which the caravan must travel across.
+ The total delay is then 
+\begin_inset Formula $3\cdot2min+2\cdot60min=126min$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+We would like to transfer a 
+\begin_inset Formula $20KB$
+\end_inset
+
+ file (
+\begin_inset Formula $1$
+\end_inset
+
+ Byte = 
+\begin_inset Formula $8$
+\end_inset
+
+ bits) across a network from node 
+\begin_inset Formula $A$
+\end_inset
+
+ to node 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ The file is broken into 
+\begin_inset Formula $20$
+\end_inset
+
+ packets of length 
+\begin_inset Formula $1KB$
+\end_inset
+
+ each (neglecting the packet header).
+ The path from node 
+\begin_inset Formula $A$
+\end_inset
+
+ to node 
+\begin_inset Formula $F$
+\end_inset
+
+ passes through 
+\begin_inset Formula $5$
+\end_inset
+
+ links and 
+\begin_inset Formula $4$
+\end_inset
+
+ routers.
+ Each of the links is a 
+\begin_inset Formula $10$
+\end_inset
+
+km optical fiber with a transmission rate of 
+\begin_inset Formula $10$
+\end_inset
+
+ Mbps.
+ Assume that the speed of light in optical fiber is 
+\begin_inset Formula $2.0\times10^{8}\frac{m}{s}$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $4$
+\end_inset
+
+ routers are store-and-forward devices, and each of them must perform a
+ 
+\begin_inset Formula $50\mu s$
+\end_inset
+
+ (
+\begin_inset Formula $1\mu s=10^{-6}s$
+\end_inset
+
+) routing table look up after receiving a packet before it can begin sending
+ it on the outgoing link.
+ How long does it take to send the entire file across the network?
+\end_layout
+
+\begin_layout Problem
+Observe that except at node 
+\begin_inset Formula $B$
+\end_inset
+
+, there will be no queueing delay.
+ This is because each of the 
+\begin_inset Formula $4$
+\end_inset
+
+ routers transmits information at the same rate.
+ For example, the the end of the second packet will reach node 
+\begin_inset Formula $C$
+\end_inset
+
+ 
+\begin_inset Formula $50\mu s+100s$
+\end_inset
+
+ (the processing delay plus the transmission delay) after the end of the
+ first packet.
+ This means that 
+\begin_inset Formula $C$
+\end_inset
+
+ will finish the forwarding lookup and finish transmitting the first packet
+ as soon as the second packet fully arrives, so there will be no queueing
+ delay.
+\end_layout
+
+\begin_layout Problem
+However, as I understand the problem, we are not assuming that node 
+\begin_inset Formula $A$
+\end_inset
+
+ needs to perform a 
+\begin_inset Formula $50\mu s$
+\end_inset
+
+ lookup, so there will be some queueing delay at node 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ To calculate how much, note that node 
+\begin_inset Formula $A$
+\end_inset
+
+ will finish transmitting the last packet will arrive at the queue for node
+ 
+\begin_inset Formula $B$
+\end_inset
+
+ 
+\begin_inset Formula $19\cdot100s=1900s$
+\end_inset
+
+ after the first packet.
+ It will take node 
+\begin_inset Formula $B$
+\end_inset
+
+ a total of 
+\begin_inset Formula $19\cdot\left(50\mu s+100\right)$
+\end_inset
+
+ to process the 
+\begin_inset Formula $19$
+\end_inset
+
+ other packets.
+ Hence, the last packet must wait at node 
+\begin_inset Formula $B$
+\end_inset
+
+ for 
+\begin_inset Formula $950\mu s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+This is equivalent to assuming that node 
+\begin_inset Formula $A$
+\end_inset
+
+ does perform a forwarding lookup.
+ In this case, the last node waits its extra 
+\begin_inset Formula $950\mu s$
+\end_inset
+
+ at the beginning rather than at node 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If there were just 
+\begin_inset Formula $1$
+\end_inset
+
+ packet, it would take 
+\begin_inset Formula $5\cdot10km/2.0\times10^{5}\frac{km}{s}+4\cdot10^{-6}s+4\cdot1KB/10Mbs\approx400s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The total time for all 
+\begin_inset Formula $20$
+\end_inset
+
+ packets is therefore the amount of time it takes for the last packet to
+ be sent across the network.
+ This is 
+\begin_inset Formula $1900s+950\mu s$
+\end_inset
+
+ more than the value above, or about 
+\begin_inset Formula $2300s$
+\end_inset
+
+.
+ That's a long time, and comes almost entirely from the low transmission
+ rate.
+\end_layout
+
+\begin_layout Problem
+Consider a link with transmission rate 
+\begin_inset Formula $R$
+\end_inset
+
+bps.
+ Suppose every 
+\begin_inset Formula $T$
+\end_inset
+
+ seconds, 
+\begin_inset Formula $N$
+\end_inset
+
+ packets arrive simultaneously to the link where each packet is of length
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ bits.
+ Assume 
+\begin_inset Formula $T\geq LN/R$
+\end_inset
+
+.
+ What is the average queueing delay of a packet?
+\end_layout
+
+\begin_layout Standard
+The assumption that 
+\begin_inset Formula $T\geq LN/R$
+\end_inset
+
+ implies that the queue will be cleared before the next burst arrives.
+ The 
+\begin_inset Formula $kth$
+\end_inset
+
+ packet in a burst will have to wait for 
+\begin_inset Formula $k-1$
+\end_inset
+
+ packets, or 
+\begin_inset Formula $\left(k-1\right)L/R$
+\end_inset
+
+ seconds.
+ The average queueing delay per packet is then 
+\begin_inset Formula 
+\[
+\frac{1}{N}\sum_{k=1}^{N}\left(k-1\right)\frac{L}{R}=\frac{\left(N-1\right)L}{2R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is the packet-average.
+ Given that a packet is likely to be sent according to the given distribution,
+ it can expect to wait this long.
+ 
+\end_layout
+
+\begin_layout Standard
+We should also find the time average, or the expected wait time of a packet
+ which is sent at time chosen uniformly at random.
+ This time can be described as some number 
+\begin_inset Formula $t\in\left[0,T\right]$
+\end_inset
+
+.
+ The packet cannot be serviced until time 
+\begin_inset Formula $\frac{NL}{R}$
+\end_inset
+
+, which is the time it takes for the burst to be handled.
+ The wait time is then 
+\begin_inset Formula $0$
+\end_inset
+
+ for 
+\begin_inset Formula $t>\frac{NL}{R}$
+\end_inset
+
+, and 
+\begin_inset Formula $\frac{NL}{R}-t$
+\end_inset
+
+ otherwise, so the expected wait time is 
+\begin_inset Formula 
+\[
+\frac{1}{T}\int_{t=0}^{\frac{NL}{R}}\left(\frac{NL}{R}-t\right)dt=\frac{1}{T}\frac{1}{2}\left(\frac{NL}{R}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Consider sending a large file of 
+\begin_inset Formula $F$
+\end_inset
+
+ bits from Host 
+\begin_inset Formula $A$
+\end_inset
+
+ to Host 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ There are three links and two switches between 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, and the links are uncongested (that is, no queueing delays).
+ Host 
+\begin_inset Formula $A$
+\end_inset
+
+ segments the file into segments of 
+\begin_inset Formula $S$
+\end_inset
+
+ bits each and adds 
+\begin_inset Formula $80$
+\end_inset
+
+ bits of header to each segment, forming packets of 
+\begin_inset Formula $L=80+S$
+\end_inset
+
+ bits.
+ Each link has a transmission rate of 
+\begin_inset Formula $R$
+\end_inset
+
+bps.
+ Disregard processing delay and propagation delay.
+\end_layout
+
+\begin_layout Problem
+a) What is the delay of moving the file from Host 
+\begin_inset Formula $A$
+\end_inset
+
+ to Host 
+\begin_inset Formula $B$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Problem
+b) Find the value of 
+\begin_inset Formula $S$
+\end_inset
+
+ that minimizes the above delay.
+\end_layout
+
+\begin_layout Standard
+a) Disregarding processing delay and propagation delay, we have only to
+ contend with transmission delay, which is 
+\begin_inset Formula $\left(N-1\right)\frac{L}{R}+3\cdot\frac{L}{R}$
+\end_inset
+
+, where 
+\begin_inset Formula $N=\frac{F}{S}$
+\end_inset
+
+ is the number of packets which must be an integer.
+ The factor of 
+\begin_inset Formula $3$
+\end_inset
+
+ reflects that there are two switches plus the host which must push the
+ packets onto the wire.
+ The delay, in terms of 
+\begin_inset Formula $S$
+\end_inset
+
+ is then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D=\frac{F}{S}\cdot\frac{80+S}{R}+2\frac{80+S}{R}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with the understanding that 
+\begin_inset Formula $\frac{F}{S}\in\mathbb{N}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+b) To minimize this quantity, we should find the critical points, where
+ 
+\begin_inset Formula $\frac{\partial D}{\partial S}=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial D}{\partial S}=-\frac{80F}{S^{2}R}+\frac{2}{R}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gives 
+\begin_inset Formula 
+\[
+S=\sqrt{40F}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Of course, we need to pick a natural number for 
+\begin_inset Formula $S$
+\end_inset
+
+ so that 
+\begin_inset Formula $\frac{F}{S}\in\mathbb{N}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $F$
+\end_inset
+
+ is not large enough, then 
+\begin_inset Formula $S>F$
+\end_inset
+
+, so our answer doesn't make sense.
+ This reflects that the packet header becomes large in proportion to the
+ packets, so it becomes more efficient to send the whole file as a single
+ packet.
+\end_layout
+
+\begin_layout Problem
+Suppose there are 
+\begin_inset Formula $M$
+\end_inset
+
+ paths between a server and a client, where no two paths share any link.
+ Path 
+\begin_inset Formula $k$
+\end_inset
+
+ (
+\begin_inset Formula $k=1,\dots,M$
+\end_inset
+
+) consists of 
+\begin_inset Formula $N$
+\end_inset
+
+ links with transmission rates 
+\begin_inset Formula $R_{1}^{k},R_{2}^{k},\dots R_{N}^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Problem
+a) If the server can only use one path to send data to the client, what
+ is the maximum throughput that the server can achieve?
+\end_layout
+
+\begin_layout Problem
+b) If the server can use all 
+\begin_inset Formula $M$
+\end_inset
+
+ paths to send data, what is the maximum throughput that the server can
+ achieve?
+\end_layout
+
+\begin_layout Standard
+a) The throughput of path 
+\begin_inset Formula $k$
+\end_inset
+
+ will be determined by its slowest link, so the maximum throughput for the
+ server is 
+\begin_inset Formula $\max_{k}\min_{n}R_{n}^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+b) If the server can use all paths, then we can just add the throughput
+ of each path.
+ 
+\begin_inset Formula $\sum_{k=1}^{M}\min_{n}\left(R_{n}^{k}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

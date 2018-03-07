@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>Projects </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mywebsite.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  <div class="container">
+    <div class= "row" id="nav-bar">
+      <nav>
+        <ul>
+          <li><a href=./index.html>Home</a></li>
+          <li><a href="./teaching.html">Teaching</a></li>
+          <li>CV</li>
+          <li><a href="./projects.html">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <h1>Projects</h1>
+    </div>
+    <div class="row">
+      <p>
+        My current project is a multidimensional Tic-Tac-Toe game written in Javascript.<br>
+        <a href="https://github.com/doogrammargood/chathat">The code</a>
+
+      </p>
+          <div id="boardContainer">
+            <div id="app" />
+          </div>
+          <button type="button" id = "toggleSize">Toggle Size</button>
+          <button type="button" id = "addBot">Add Bot</button>
+          <button type="button" id = "undoMove">Undo Move</button>
+          <script src="chathat.js" type="text/javascript"></script>
+          <script src="heuristic.js" type="text/javascript"></script>
+          <script src="bot.js" type="text/javascript"></script>
+          <script src="bundle.js" type="text/javascript"></script>
+
+    </div>
+    <br/>
+    <h3>Description</h3>
+    <ul>
+      <li>Players X and O (gold and silver) take turns marking squares</li>
+      <li>A player can only play on the allowed board (purple), which is determined by the previous moves</li>
+      <li>A player captures a board by getting 3 in a row. If the other player gets 2 sets of 3 in a row, he may steal the board.</li>
+      <li>The game is won when the largest board is captured.</li>
+      <li>If a player is forced to play on a full board he/she may play anywhere within the larger board containing this full board.</li>
+      <li>The Toggle Size button creates a new game with a different size.</li>
+      <li>The Add Bot creates a bot which uses alpha beta/pruning with a depth search up to 5.</li>
+      <li>You can press the Add Bot button again to see the bot play itself. (this takes a little while on the largest board)</li>
+      <li>For some reason, this doesn't work on mobile. Possibly due to CSS grid?</li>
+      <li>The Undo Move button undoes the last move. If you are playing a bot, you'll have to click it twice to undo the bot's move and your last move.</li>
+      <li>Through development, the undo move button has been buggy. It had better work now, because the bot relies on this function.</li>
+    </ul>
+    <br/>
+    <p>
+      My next project will be to create a program which takes a video of a person juggling balls and uses some computer vision techniques to determine the siteswap.
+      Jumbled code can be found <a href= "https://github.com/doogrammargood/potatoWasp">here</a>.
+      My plan is the following:
+        <ol>
+          <li>Apply a background filter based on motion.</li>
+          <li>Use Hough Circle detection to find circles, which are hopefully mostly balls.</li>
+          <li>Plot these balls and fit parabolas to them.</li>
+          <li>Use wishful thinking on throws that are too fast to be captured on camera.</li>
+        </ol>
+      Interestingly, apart from the wishful thinking, there's no neural networks or probabilistic machine learning.
+      When this plan fails, I'll try and train a neural network to watch the juggler's hands to handle the vamps.
+    </p>
+  </div>
+
+  </body>
+</html>
